@@ -32,12 +32,29 @@ a {
 }
 
 .post {
-    background: #FFF;
+    background: linear-gradient(
+        to right,#f7f7f7, #833ab4,
+        #fd1d1d, #fcb045, #f7f7f7);
+    background-size: 400% 400%;
+    animation: animate-background 10s infinite ease-in-out;
     padding: 20px;
     border: 3px solid #505050;
     margin-bottom: 15px;
     border-radius: 8px 8spx 20px 20px;
+    }
+
+    @keyframes  animate-background {
+        0%{
+            background-position: 0 50%;
+        }
+        50%{
+            background-position: 100% 50%;
+        }
+        100%{
+            background-position: 0 50%;
+        }
 }
+
 
 .post_content{
     margin: 0;
@@ -48,6 +65,7 @@ a {
 
 .post_image{
     width: 100%;
+    height: 250px;
     margin-bottom: 15px;
 }
 
